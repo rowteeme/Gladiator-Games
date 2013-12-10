@@ -1,35 +1,15 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+/* ID for the elimination round image under the header banner */
 #elimination { 
 	width: 100%;
 	background: url('https://opop.cachefly.net/amazonnb/elimination.png');
  }
-
-/* Navigation Styles */
-
-#cnav_submit { 
-	background: url('https://opop.cachefly.net/amazonnb/enter.png') no-repeat;
-	width: 400px;
-	height: 88px;
-	display: block;
-	float: left;
+ /* Hides photo contest nav bar, side bar for Twitter and Instagram instructions, rules after sign up, footer divder, footer, share */
+ div.CNav, #external_submission_instruction, div.SRules, div.CFooterDivider, div.CFooter, div.CShare {
+	display: none;
 }
-
-#cnav_view {
-	background: url('https://opop.cachefly.net/amazonnb/gallery.png') no-repeat;
-	width: 400px;
-	height: 88px;
-	display: block;
-	float: left;
-
-}
-
-#cnav_about { display: none;}
-
-.CNav { 
-	width: 810px !important;
-	padding: 0;
-
-}
-
-.CNav a {
-	padding: 0 !important;
-}
+ 
