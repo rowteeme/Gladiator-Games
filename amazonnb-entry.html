@@ -1,0 +1,39 @@
+#elimination { 
+	width: 100%;
+	background: url('https://opop.cachefly.net/amazonnb/elimination.png');
+ }
+
+/* Navigation Styles */
+
+#cnav_submit { 
+	background: url('https://opop.cachefly.net/amazonnb/enter.png') no-repeat;
+	width: 400px;
+	height: 88px;
+	display: block;
+	float: left;
+}
+
+#cnav_view {
+	background: url('https://opop.cachefly.net/amazonnb/gallery.png') no-repeat;
+	width: 400px;
+	height: 88px;
+	display: block;
+	float: left;
+
+}
+
+#cnav_about { display: none;}
+
+.CNav { 
+	width: 810px !important;
+	padding: 0;
+
+}
+
+.CNav a {
+	padding: 0 !important;
+}
+
+jQuery(function($) {
+	$('#elimination').insertAfter('.CHeader');
+});
