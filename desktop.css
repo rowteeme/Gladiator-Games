@@ -9,8 +9,11 @@
 	background: url('https://opop.cachefly.net/amazonnb/elimination.png');
  }
  /* Hides photo contest nav bar, side bar for Twitter and Instagram instructions, rules after sign up, footer divder, footer, share */
- div.CNav, #external_submission_instruction, div.SRules, div.CFooterDivider, div.CFooter, div.CShare {
+ div.CNav, #external_submission_instruction, div.SRules, div.CFooterDivider, div.CFooter, div.CShare, #facebook-profile-connect {
 	display: none;
+}
+#upload_entry label, #photo-upload-note {
+	display: none !important;
 }
 
 

@@ -25,9 +25,12 @@ jQuery(function($){
 	$(document).ready(function(){
 	
 		$("div.CFooterDivider").next().hide();
+		$("div.CFooter").prev().remove();
 		
 	});	
 
 });
+
+
 
 
