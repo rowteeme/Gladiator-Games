@@ -19,3 +19,15 @@ jQuery(function($) {
 //iFrame Gallery to bottom of experience
 
 
+//On DOM Ready function to get rid of all the crap in the footer
+jQuery(function($){
+
+	$(document).ready(function(){
+	
+		$("div.CFooterDivider").next().hide();
+		
+	});	
+
+});
+
+
