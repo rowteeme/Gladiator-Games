@@ -16,16 +16,18 @@
 	- Share button in footer
  */
 
- div.CNav, #external_submission_instruction, div.SRules, div.CFooterDivider, div.CFooter, div.CShare, #facebook-profile-connect, #upload_entry label, #photo-upload-note {
+ div.CNav, #external_submission_instruction, div.SRules, div.CFooterDivider, div.CFooter, div.CShare, 
+#facebook-profile-connect, #upload_entry label, #photo-upload-note {
 	display: none;
 }
 
-/* Hidden elements that will appear later */
-
-/*
-#upload_entry label, #photo-upload-note {
+/* Hide All Form Fields on Load */
+#sfield_caption, #sfield_firstname, #sfield_lastname, #sfield_email, #sfield_city, #sfield_optin1, #sfield_optin2, .SSubmit {
 	display: none !important;
-}*/
+}
+
+
+/* #upload_entry label, #photo-upload-note {     display: none !important; }*/
 
 
 /* Background for the Elimination Round section */
@@ -34,9 +36,24 @@
 	background: url('https://opop.cachefly.net/amazonnb/elimination.png');
  }
 
+ /* Background for the Participation Instructions */
+#participate {
+	width: 100%;
+	height: 448px;
+	background: url('https://opop.cachefly.net/amazonnb/instructions1.png');
+}
+
+/* Background for the Submission Form page */
 .CSub { 
  	background: url('https://opop.cachefly.net/amazonnb/submit-bg1.png');
 }
+
+
+/* Get rid of white space in between header and elimination round area */
+.tab { margin: 0 0 -5px 0 !important; }
+
+/* Resize Elimination Round Graphic to 810px */
+#instructions img { width: 810px !important; }
 
 
 

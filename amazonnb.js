@@ -8,14 +8,20 @@ jQuery(function($){
 });
 
 
+
 // Inserting and Moving Around Divs
 
 jQuery(function($) {
-	$('#elimination').insertAfter('.CHeader');
-	$('#cnav_submit').prependTo('.CNav');
+	// Insert the Participate Instructions below .SBox
+	$('<div id="participate"></div>').insertBefore('.SRules');
 });
 
-//iFrame Gallery to bottom of experience
+//Pre-Populate Fields that aren't being used with dummy text
+
+jQuery(function($){
+	$('#caption').attr('value', 'Caption');
+	$('#city').attr('value', 'City');
+});
 
 
 
