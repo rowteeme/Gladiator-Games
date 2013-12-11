@@ -93,6 +93,7 @@ h1 {
 #instructions img { width: 810px !important; }
 
 /* Add padding in between each of the upload method CTAs. Padding at 20px leaves space for Twitter CTA */
+<<<<<<< HEAD
 
 .social-cta { 
 	padding: 0 20px;
@@ -101,3 +102,6 @@ h1 {
 
 .social-cta { padding: 0 20px; }
 
+=======
+.social-cta { padding: 0 20px; }
+>>>>>>> dd1122f0ce31a8a3ee463170fabcdebcf2730dea
