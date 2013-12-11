@@ -1,19 +1,56 @@
+/*	CSS DESKTOP STYLES 	*/
+
+/* Reset Browser Default Styles */
 * {
 	margin: 0px;
 	padding: 0px;
 	border: 0px;
 }
-/* ID for the elimination round image under the header banner */
+
+ /* Hide Unused Elements
+	-  Nav Bar
+	- External Submissions (Twitter + Instagram)
+	- Rules Section
+	- Footer Divider
+	- Footer
+	- Share button in footer
+ */
+
+ div.CNav, #external_submission_instruction, div.SRules, div.CFooterDivider, div.CFooter, div.CShare, 
+#facebook-profile-connect, #upload_entry label, #photo-upload-note {
+	display: none;
+}
+
+/* Hide All Form Fields on Load */
+#sfield_caption, #sfield_firstname, #sfield_lastname, #sfield_email, #sfield_city, #sfield_optin1, #sfield_optin2,
+#sfield_name, #sfield_surname, #sfield_zip, #upload_entry, .SDeclare, .SSubmit {
+	display: none !important;
+}
+
+/* Text Styling */
+h1 {
+	font-size: 18px;
+	margin: 30px 85px 20px;
+	font-style: italic;
+}
+
+
+/* Background for the Elimination Round section */
 #elimination { 
 	width: 100%;
 	background: url('https://opop.cachefly.net/amazonnb/elimination.png');
  }
- /* Hides photo contest nav bar, side bar for Twitter and Instagram instructions, rules after sign up, footer divder, footer, share */
- div.CNav, #external_submission_instruction, div.SRules, div.CFooterDivider, div.CFooter, div.CShare, #facebook-profile-connect {
-	display: none;
+
+ /* Background for the Participation Instructions */
+#participate {
+	width: 100%;
+	height: 448px;
+	background: url('https://opop.cachefly.net/amazonnb/instructions1.png');
 }
-#upload_entry label, #photo-upload-note {
-	display: none !important;
+
+/* Background for the Submission Form page */
+.CSub { 
+ 	background: url('https://opop.cachefly.net/amazonnb/submit-bg1.png');
 }
 /* CSS for Pop Up */
 
@@ -49,4 +86,11 @@
 /* End CSS for Pop up */
 
 
+/* Get rid of white space in between header and elimination round area */
+.tab { margin: 0 0 -5px 0 !important; }
 
+/* Resize Elimination Round Graphic to 810px */
+#instructions img { width: 810px !important; }
+
+/* Add padding in between each of the upload method CTAs. Padding at 20px leaves space for Twitter CTA */
+.social-cta { padding: 0 20px; }
