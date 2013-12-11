@@ -31,6 +31,27 @@ jQuery(function($){
 
 });
 
+//Function for pop up
+jQuery(function($) {		   
+	$('a.popup').click(function() {				
+			var popuprel = $(this).attr('rel');
+		$('#' + popuprel).fadeIn();
+		$('#fadebg').css({'filter' : 'alpha(opacity=80)'}).fadeIn();
+			var topindent = ($('#' + popuprel).height() + 10) / 2;
+			var leftindent = ($('#' + popuprel).width() + 10) / 2;
+		$('#' + popuprel).css({
+			'margin-top' : -topindent,
+			'margin-left' : -leftindent
+		});
+	});
+		
+		$('#fadebg , .closebutton').click(function() {
+				  
+		$('#popbox1, #fadebg').fadeOut()
+		return false;
+	});
+});
+
 
 
 
