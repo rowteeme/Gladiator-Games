@@ -21,10 +21,9 @@
 	display: none;
 }
 
-/* Hide All Form Fields on Load */
-#sfield_caption, #sfield_firstname, #sfield_lastname, #sfield_email, #sfield_city, #sfield_optin1, #sfield_optin2,
-#sfield_name, #sfield_surname, #sfield_zip, #upload_entry, .SDeclare, .SSubmit {
-	display: none !important;
+/* Hide Whole form on Load */
+#entry_submit, div.SBox {
+	display: none;
 }
 
 /* Text Styling */
@@ -56,13 +55,9 @@ h1 {
 
 .projectsboxpop {
  	display: none; 
-  	width:400px;
- 	height:350px;
 	background-color:#fff;
 	float: left;
 	position: fixed;
-	top: 50%; 
-	left: 50%;
 	z-index: 99999;
 	-webkit-box-shadow: 0px 0px 20px #000;
 	-moz-box-shadow: 0px 0px 20px #000;

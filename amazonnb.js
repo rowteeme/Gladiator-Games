@@ -13,7 +13,7 @@ jQuery(function($){
 
 jQuery(function($) {
 	// Insert the Participate Instructions below .SBox
-	$('<div id="participate"></div>').insertBefore('.SRules');
+	$('<div id="participate"></div>').insertAfter('.SBox');
 	// Create a div called Submit Section and append to .SBox
 	$('<div id="submit-section"><h1>Tag your entry with #NBGladiator or upload from the options below</h1><div id="upload-methods"><img id="computer-upload" class="social-cta" src="https://opop.cachefly.net/amazonnb/upload.png" /><img id="facebook-upload" class="social-cta" src="https://opop.cachefly.net/amazonnb/facebook.png" /><img id="instagram-cta" class="social-cta" src="https://opop.cachefly.net/amazonnb/instagram.png" /></div></div>').insertAfter('#instructions');
 });
@@ -48,14 +48,17 @@ jQuery(function($){
 jQuery(function($) {		   
 	$('.social-cta').click(function() {				
 			var popuprel = $(this).attr('rel');
-		$('#' + popuprel).fadeIn();
 		$('#fadebg').css({'filter' : 'alpha(opacity=80)'}).fadeIn();
-			var topindent = ($('#' + popuprel).height() + 10) / 2;
-			var leftindent = ($('#' + popuprel).width() + 10) / 2;
+			var popwidth = ($('#' + popuprel).width());
+			var backwidth = ($("#fadebg").width());
+			var width = (popwidth * 100)/backwidth;
+			var margin = width/2;
 		$('#' + popuprel).css({
-			'margin-top' : -topindent,
-			'margin-left' : -leftindent
+			'width' : width + "%",
+			'margin' : '0px,' + margin + 'px'
 		});
+		$("#entry_submit, div.SBox").appendTo("#popbox1").fadeIn();
+		$('#' + popuprel).fadeIn();
 	});
 		
 		$('#fadebg , .closebutton').click(function() {
@@ -64,5 +67,6 @@ jQuery(function($) {
 		return false;
 	});
 });
+
 
 
