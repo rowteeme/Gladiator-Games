@@ -29,7 +29,7 @@
 
 /* Text Styling */
 h1 {
-	font-size: 18px;
+	font-size: 16px;
 	margin: 30px 85px 20px;
 	font-style: italic;
 }
@@ -90,18 +90,14 @@ h1 {
 .tab { margin: 0 0 -5px 0 !important; }
 
 /* Resize Elimination Round Graphic to 810px */
-#instructions img { width: 810px !important; }
+img.elm { width: 810px !important; } 
 
 /* Add padding in between each of the upload method CTAs. Padding at 20px leaves space for Twitter CTA */
-<<<<<<< HEAD
+
 
 .social-cta { 
 	padding: 0 20px;
 	cursor: pointer;
  }
 
-.social-cta { padding: 0 20px; }
 
-=======
-.social-cta { padding: 0 20px; }
->>>>>>> dd1122f0ce31a8a3ee463170fabcdebcf2730dea

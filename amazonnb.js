@@ -39,7 +39,7 @@ jQuery(function($){
 		$("div.CFooterDivider").next().hide();
 		$("div.CFooter").prev().remove();
 		
-<<<<<<< HEAD
+
 	});	
 
 });
@@ -66,9 +66,3 @@ jQuery(function($) {
 });
 
 
-
-=======
-	});
->>>>>>> f47520282a1cda239840d5db770b58323ab56492
-
-});
