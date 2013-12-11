@@ -1,7 +1,6 @@
 // Redirect users from Submit page to About page
 
 jQuery(function($){
-	//.SDescription only exists on default About Tab - Do Not Edit
 	if ($('.SDescription').length > 0){
 	var enter = $('#cnav_submit').attr('href');
 	window.open( enter , '_self');
@@ -19,6 +18,7 @@ jQuery(function($) {
 //iFrame Gallery to bottom of experience
 
 
+
 //On DOM Ready function to get rid of all the crap in the footer
 jQuery(function($){
 
@@ -27,7 +27,7 @@ jQuery(function($){
 		$("div.CFooterDivider").next().hide();
 		$("div.CFooter").prev().remove();
 		
-	});	
+	});
 
 });
 

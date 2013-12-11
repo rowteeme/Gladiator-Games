@@ -1,19 +1,41 @@
+/*	CSS DESKTOP STYLES 	*/
+
+/* Reset Browser Default Styles */
 * {
 	margin: 0px;
 	padding: 0px;
 	border: 0px;
 }
-/* ID for the elimination round image under the header banner */
+
+ /* Hide Unused Elements
+	-  Nav Bar
+	- External Submissions (Twitter + Instagram)
+	- Rules Section
+	- Footer Divider
+	- Footer
+	- Share button in footer
+ */
+
+ div.CNav, #external_submission_instruction, div.SRules, div.CFooterDivider, div.CFooter, div.CShare, #facebook-profile-connect, #upload_entry label, #photo-upload-note {
+	display: none;
+}
+
+/* Hidden elements that will appear later */
+
+/*
+#upload_entry label, #photo-upload-note {
+	display: none !important;
+}*/
+
+
+/* Background for the Elimination Round section */
 #elimination { 
 	width: 100%;
 	background: url('https://opop.cachefly.net/amazonnb/elimination.png');
  }
- /* Hides photo contest nav bar, side bar for Twitter and Instagram instructions, rules after sign up, footer divder, footer, share */
- div.CNav, #external_submission_instruction, div.SRules, div.CFooterDivider, div.CFooter, div.CShare, #facebook-profile-connect {
-	display: none;
-}
-#upload_entry label, #photo-upload-note {
-	display: none !important;
+
+.CSub { 
+ 	background: url('https://opop.cachefly.net/amazonnb/submit-bg1.png');
 }
 
 
