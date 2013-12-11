@@ -14,8 +14,8 @@ jQuery(function($){
 jQuery(function($) {
 	// Insert the Participate Instructions below .SBox
 	$('<div id="participate"></div>').insertAfter('.SBox');
-	// Create a div called Submit Section and append to .SBox
-	$('<div id="submit-section"><h1>Tag your entry with #NBGladiator or upload from the options below</h1><div id="upload-methods"><img id="computer-upload" class="social-cta" src="https://opop.cachefly.net/amazonnb/upload.png" /><img id="facebook-upload" class="social-cta" src="https://opop.cachefly.net/amazonnb/facebook.png" /><img id="instagram-cta" class="social-cta" src="https://opop.cachefly.net/amazonnb/instagram.png" /></div></div>').insertAfter('#instructions');
+	// Create a div called Submit Section and insert after Instructions
+	// $('<div id="submit-section"><h1>Tag your entry with #NBGladiator or upload from the options below</h1><div id="upload-methods"><img id="computer-upload" class="social-cta" src="https://opop.cachefly.net/amazonnb/upload.png" /><img id="facebook-upload" class="social-cta" src="https://opop.cachefly.net/amazonnb/facebook.png" /><img id="instagram-cta" class="social-cta" src="https://opop.cachefly.net/amazonnb/instagram.png" /></div></div>').insertAfter('#instructions');
 });
 
 // Pre-Populate Fields that aren't being used with dummy text
@@ -25,11 +25,8 @@ jQuery(function($){
 	$('#city').attr('value', 'City');
 });
 
-// Move form fields to modal div
 
-jQuery(function($) {
-	$('')
-});
+
 
 // On DOM Ready function to get rid of all the crap in the footer
 jQuery(function($){
@@ -64,8 +61,12 @@ jQuery(function($){
 
 
 jQuery(function($) {   
-	$('.social-cta').click(function() {
-		var popuprel = $(this).attr('rel');
+	// Move SBox into the PopBox
+	$('.SBox').appendTo('#popbox1');
+
+	//Create positionPopBox function for reuse
+	var positionPopBox = function(elem){
+		var popuprel = $(elem).attr('rel');
 		$('#' + popuprel).fadeIn();
 		$('#fadebg').css({'filter' : 'alpha(opacity=80)'}).fadeIn();
 		var topindent = ($('#' + popuprel).height() + 10) / 2;
@@ -74,16 +75,21 @@ jQuery(function($) {
 		'margin-top' : -topindent,
 		'margin-left' : -leftindent
 		});
+	}
+
+	//If the error message exists
+	if($('.Invalid').length > 0) {
+		var that = $('.social-cta').first();
+		positionPopBox(that)
+	}
+
+	$('.social-cta').click(function() {
+		var that = this;
+		positionPopBox(that)
 	});
+
 	$('#fadebg , .closebutton').click(function() {  
 		$('#popbox1, #fadebg').fadeOut()
 		return false;
 	});
 });
-
-
-
-});
-
-
-

@@ -22,7 +22,7 @@
 }
 
 /* Hide Whole form on Load */
-#entry_submit, div.SBox {
+#entry_submit{
 	display: none;
 }
 
@@ -54,10 +54,10 @@ h1 {
 /* CSS for Pop Up */
 
 .projectsboxpop {
- 	display: none; 
- 	width: 400px;
- 	height: 350px;
-	background-color:#fff;
+	display: none;
+	width: 600px;
+	height: 550px;
+	background: url('https://opop.cachefly.net/amazonnb/submit-bg1.png');
 	float: left;
 	position: fixed;
 	top: 50%;
@@ -68,6 +68,7 @@ h1 {
 	box-shadow: 0px 0px 20px #000;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
+	padding: 20px;
 }
 
 #fadebg {
@@ -98,5 +99,7 @@ img.elm { width: 810px !important; }
 	padding: 0 20px;
 	cursor: pointer;
  }
+
+ 
 
 
