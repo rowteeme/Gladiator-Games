@@ -46,7 +46,7 @@ jQuery(function($){
 
 //Function for pop up
 jQuery(function($) {		   
-	$('a.popup').click(function() {				
+	$('.social-cta').click(function() {				
 			var popuprel = $(this).attr('rel');
 		$('#' + popuprel).fadeIn();
 		$('#fadebg').css({'filter' : 'alpha(opacity=80)'}).fadeIn();
