@@ -25,7 +25,11 @@ jQuery(function($){
 	$('#city').attr('value', 'City');
 });
 
+// Move form fields to modal div
 
+jQuery(function($) {
+	$('')
+});
 
 // On DOM Ready function to get rid of all the crap in the footer
 jQuery(function($){
