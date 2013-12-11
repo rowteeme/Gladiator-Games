@@ -22,12 +22,17 @@
 }
 
 /* Hide All Form Fields on Load */
-#sfield_caption, #sfield_firstname, #sfield_lastname, #sfield_email, #sfield_city, #sfield_optin1, #sfield_optin2, .SSubmit {
+#sfield_caption, #sfield_firstname, #sfield_lastname, #sfield_email, #sfield_city, #sfield_optin1, #sfield_optin2,
+#sfield_name, #sfield_surname, #sfield_zip, #upload_entry, .SDeclare, .SSubmit {
 	display: none !important;
 }
 
-
-/* #upload_entry label, #photo-upload-note {     display: none !important; }*/
+/* Text Styling */
+h1 {
+	font-size: 18px;
+	margin: 30px 85px 20px;
+	font-style: italic;
+}
 
 
 /* Background for the Elimination Round section */
@@ -55,5 +60,5 @@
 /* Resize Elimination Round Graphic to 810px */
 #instructions img { width: 810px !important; }
 
-
-
+/* Add padding in between each of the upload method CTAs. Padding at 20px leaves space for Twitter CTA */
+.social-cta { padding: 0 20px; }
