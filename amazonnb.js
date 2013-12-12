@@ -81,23 +81,6 @@ jQuery(function($){
 
 });
 
-//Function for pop up
-
-// jQuery(function($) {		   
-// 	$('.social-cta').click(function() {				
-// 		var popuprel = $(this).attr('rel');
-// 		$('#fadebg').css({'filter' : 'alpha(opacity=80)'}).fadeIn();
-// 		$('#' + popuprel).css({
-// 			'width' : width + "%",
-// 			'margin' : '0px,' + margin + 'px'
-// 		});
-// 		$("#entry_submit, div.SBox").appendTo("#popbox1").fadeIn();
-// 		$('#' + popuprel).fadeIn();
-// 	});
-// 		$('#fadebg , .closebutton').click(function() {
-// 		$('#popbox1, #fadebg').fadeOut()
-// 		return false;
-// 	});
 
 
 jQuery(function($) {   
