@@ -140,6 +140,7 @@ jQuery(function($) {
 jQuery(function($){
 if ($('#frmSignUp').length > 0 ) {
 
+	//Take height of cropbox & resize modal
 	var resize = function(){
 		var nheight = parseInt(document.getElementById('cropbox').style.height)
 		,rheight = 380 + nheight;
@@ -147,31 +148,34 @@ if ($('#frmSignUp').length > 0 ) {
 		$('#popbox1').css('height',rheight + 'px');
 	}
 
-var validation = function(){
-	var nimgLink = $('#cropbox').attr('src');
-	if (imgLink === nimgLink){
-		setTimeout( validation, 1500)
-	} 
-	else{
-		resize();
-	}
-}
+		//Validate image links from facebook Click event
+		var validation = function(){
+			var nimgLink = $('#cropbox').attr('src');
+				if (imgLink === nimgLink){
+					setTimeout( validation, 1500)
+				} 
+				else{
+					resize();
+				}
+		}
 
-$('.CFile .from_facebook_button.fancybox_link').click(function(){
-	imgLink = $('#cropbox').attr('src');
-	setTimeout(validation, 1000);
-});
+		var blankLink = '//s3.amazonaws.com/com.offerpop.static/images/white.gif'
+			,freshLink = $('#cropbox').attr('src');
 
-$('#file_data').change(function(){
-	setTimeout( resize, 3000)
-});
+				if (freshLink !== blankLink){
+					resize();
+				}
 
-var blankLink = '//s3.amazonaws.com/com.offerpop.static/images/white.gif'
-,freshLink = $('#cropbox').attr('src');
+		$('.CFile .from_facebook_button.fancybox_link').click(function(){
+			imgLink = $('#cropbox').attr('src');
+			setTimeout(validation, 1000);
+		});
 
-if (freshLink !== blankLink){
-	resize();
-}
+		$('#file_data').change(function(){
+			imgLink = $('#cropbox').attr('src');
+			setTimeout(validation, 1000);
+		});
+
 
 }
 });
