@@ -142,8 +142,11 @@ if ($('#frmSignUp').length > 0 ) {
 
 	//Take height of cropbox & resize modal
 	var resize = function(){
-		var nheight = parseInt(document.getElementById('cropbox').style.height)
-		,rheight = 380 + nheight;
+		var nheight = parseInt(document.getElementById('cropbox').style.height);
+		if (nheight < 250){
+			nheight = 250;
+		}
+		var rheight = 380 + nheight;
 
 		$('#popbox1').css('height',rheight + 'px');
 	}
