@@ -21,10 +21,9 @@
 	display: none;
 }
 
-/* Hide All Form Fields on Load */
-#sfield_caption, #sfield_firstname, #sfield_lastname, #sfield_email, #sfield_city, #sfield_optin1, #sfield_optin2,
-#sfield_name, #sfield_surname, #sfield_zip, #upload_entry, .SDeclare, .SSubmit {
-	display: none !important;
+/* Hide Whole form on Load */
+#entry_submit{
+	display: none;
 }
 
 /* Text Styling */
@@ -55,13 +54,13 @@ h1 {
 /* CSS for Pop Up */
 
 .projectsboxpop {
- 	display: none; 
-  	width:400px;
- 	height:350px;
-	background-color:#fff;
+	display: none;
+	width: 600px;
+	height: 550px;
+	background: url('https://opop.cachefly.net/amazonnb/submit-bg1.png');
 	float: left;
 	position: fixed;
-	top: 50%; 
+	top: 50%;
 	left: 50%;
 	z-index: 99999;
 	-webkit-box-shadow: 0px 0px 20px #000;
@@ -69,6 +68,7 @@ h1 {
 	box-shadow: 0px 0px 20px #000;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
+	padding: 20px;
 }
 
 #fadebg {
@@ -99,5 +99,7 @@ img.elm { width: 810px !important; }
 	padding: 0 20px;
 	cursor: pointer;
  }
+
+ 
 
 
