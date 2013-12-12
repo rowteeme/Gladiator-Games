@@ -122,7 +122,7 @@ jQuery(function($) {
 		var validateLinks = function(){
 			var secondLink = $('#cropbox').attr('src');
 			if (firstLink === secondLink){
-				setTimeout(validateLinks, 2000);
+				setTimeout(validateLinks, 1500);
 			} else{
 				$('#popbox1, #fadebg').fadeIn();
 			}
