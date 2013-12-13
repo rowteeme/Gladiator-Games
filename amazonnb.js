@@ -7,6 +7,37 @@ jQuery(function($){
 	}
 });
 
+// Resize iframe height to content [code found online, does not work cross-domain]
+ 	$(function(){
+    
+        var iFrames = $('iframe');
+      
+    	function iResize() {
+    	
+    		for (var i = 0, j = iFrames.length; i < j; i++) {
+    		  iFrames[i].style.height = iFrames[i].contentWindow.document.body.offsetHeight + 'px';
+    		}
+    	}
+    	    
+    	if ($.browser.safari || $.browser.opera) { 
+    	
+    	   iFrames.load(function(){
+    	       setTimeout(iResize, 0);
+           });
+        
+    	   for (var i = 0, j = iFrames.length; i < j; i++) {
+    			var iSource = iFrames[i].src;
+    			iFrames[i].src = '';
+    			iFrames[i].src = iSource;
+           }
+               
+        	} else {
+        		iFrames.load(function() { 
+        	       this.style.height = this.contentWindow.document.body.offsetHeight + 'px';
+        		});
+        	}
+        
+    });
 
 
 // Inserting and Moving Around Divs
@@ -16,6 +47,9 @@ jQuery(function($) {
 	$('<div id="participate"></div>').insertAfter('.SBox');
 	// Create a div called Submit Section and insert after Instructions
 	// $('<div id="submit-section"><h1>Tag your entry with #NBGladiator or upload from the options below</h1><div id="upload-methods"><img id="computer-upload" class="social-cta" src="https://opop.cachefly.net/amazonnb/upload.png" /><img id="facebook-upload" class="social-cta" src="https://opop.cachefly.net/amazonnb/facebook.png" /><img id="instagram-cta" class="social-cta" src="https://opop.cachefly.net/amazonnb/instagram.png" /></div></div>').insertAfter('#instructions');
+
+	//Insert the Gallery beneath the Submit page
+	$('<iframe src="https://offerpop.com/Contest.psp?c=512215&amp;u=54823&amp;a=281603285304794&amp;p=643783498974952&amp;rest=0&amp;v=View" id="bottomgallery" width="100%" height="auto"/>').insertBefore('.CFooterDivider'); 
 });
 
 // Pre-Populate Fields that aren't being used with dummy text
@@ -122,7 +156,7 @@ jQuery(function($) {
 		var validateLinks = function(){
 			var secondLink = $('#cropbox').attr('src');
 			if (firstLink === secondLink){
-				setTimeout(validateLinks, 1500);
+				setTimeout(validateLinks, 2000);
 			} else{
 				$('#popbox1, #fadebg').fadeIn();
 			}
@@ -134,51 +168,4 @@ jQuery(function($) {
 		$('#popbox1, #fadebg').fadeOut()
 		return false;
 	});
-});
-
-
-jQuery(function($){
-if ($('#frmSignUp').length > 0 ) {
-
-	//Take height of cropbox & resize modal
-	var resize = function(){
-		var nheight = parseInt(document.getElementById('cropbox').style.height);
-		if (nheight < 250){
-			nheight = 250;
-		}
-		var rheight = 380 + nheight;
-
-		$('#popbox1').css('height',rheight + 'px');
-	}
-
-		//Validate image links from facebook Click event
-		var validation = function(){
-			var nimgLink = $('#cropbox').attr('src');
-				if (imgLink === nimgLink){
-					setTimeout( validation, 1500)
-				} 
-				else{
-					resize();
-				}
-		}
-
-		var blankLink = '//s3.amazonaws.com/com.offerpop.static/images/white.gif'
-			,freshLink = $('#cropbox').attr('src');
-
-				if (freshLink !== blankLink){
-					resize();
-				}
-
-		$('.CFile .from_facebook_button.fancybox_link').click(function(){
-			imgLink = $('#cropbox').attr('src');
-			setTimeout(validation, 1000);
-		});
-
-		$('#file_data').change(function(){
-			imgLink = $('#cropbox').attr('src');
-			setTimeout(validation, 1000);
-		});
-
-
-}
 });
