@@ -8,36 +8,36 @@ jQuery(function($){
 });
 
 // Resize iframe height to content [code found online, does not work cross-domain]
- 	$(function(){
+$(function(){
+
+    var iFrames = $('iframe');
+  
+	function iResize() {
+	
+		for (var i = 0, j = iFrames.length; i < j; i++) {
+		  iFrames[i].style.height = iFrames[i].contentWindow.document.body.offsetHeight + 'px';
+		}
+	}
+	    
+	if ($.browser.safari || $.browser.opera) { 
+	
+	   iFrames.load(function(){
+	       setTimeout(iResize, 0);
+       });
     
-        var iFrames = $('iframe');
-      
-    	function iResize() {
-    	
-    		for (var i = 0, j = iFrames.length; i < j; i++) {
-    		  iFrames[i].style.height = iFrames[i].contentWindow.document.body.offsetHeight + 'px';
-    		}
-    	}
-    	    
-    	if ($.browser.safari || $.browser.opera) { 
-    	
-    	   iFrames.load(function(){
-    	       setTimeout(iResize, 0);
-           });
-        
-    	   for (var i = 0, j = iFrames.length; i < j; i++) {
-    			var iSource = iFrames[i].src;
-    			iFrames[i].src = '';
-    			iFrames[i].src = iSource;
-           }
-               
-        	} else {
-        		iFrames.load(function() { 
-        	       this.style.height = this.contentWindow.document.body.offsetHeight + 'px';
-        		});
-        	}
-        
-    });
+	   for (var i = 0, j = iFrames.length; i < j; i++) {
+			var iSource = iFrames[i].src;
+			iFrames[i].src = '';
+			iFrames[i].src = iSource;
+       	}
+           
+    	} else {
+    		iFrames.load(function() { 
+    	       this.style.height = this.contentWindow.document.body.offsetHeight + 'px';
+			}
+		);
+	}
+});
 
 
 // Inserting and Moving Around Divs
