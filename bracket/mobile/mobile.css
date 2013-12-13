@@ -1,19 +1,10 @@
-/*
-
-font-family: 'Titillium Web', sans-serif;
-font-weight: 200;
-font-weight: 300;
-font-weight: 400;
-font-weight: 600;
-font-weight: 600; font-style: italic;
-font-weight: 700;
-font-weight: 700; font-style: italic;
-
-*/
-
+/* CSS FOR BRACKET */
 
 li {
     list-style: none;
+}
+ul {
+    padding: 0px;
 }
 .width {
     width: 100%;
@@ -35,11 +26,12 @@ a:hover {
 /* The container the bracket lives in */
 #bracket {
     margin: 0px auto;
+font-size: 12px !important;
 }
 
 /* Classes for column heights */
 .column {
-    padding: 20px 20px;
+    /* padding: 20px 20px; */
 }
 .column li {
     background: #fff;
@@ -84,6 +76,12 @@ a:hover {
 #column-4 li {
     
 }
+#column-1 {
+    padding-left: 0px !important;
+}
+#column-7 {
+    padding-right: 0px !important;
+}
 .top {
     margin-top: 0px;
 }
@@ -98,30 +96,19 @@ a:hover {
 }
 
 /* Media Queries */
-@media screen and (max-width: 980px) {
-
-    .column {
-        padding: 20px 18px;
-    }
-
-}
 
 @media screen and (max-width: 960px) { 
-    body {
+    #bracket {
         font-size: 17px;
-    }
-    .column {
-        padding: 20px 8px;
     }
 }
 
-@media screen and (max-width: 720px) {
-    .column {
-        padding: 20px 6px;
+@media screen and (max-width: 640px) {
+    
+    #bracket {
+        font-size: 14px;
     }
+  
 }
-@media screen and (max-width: 692px) {
-    .column li {
-        padding: 5px 6px;
-    }
-}
+
+/* CSS FOR BRACKET END */
