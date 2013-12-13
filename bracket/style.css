@@ -1,0 +1,142 @@
+/*
+
+font-family: 'Titillium Web', sans-serif;
+font-weight: 200;
+font-weight: 300;
+font-weight: 400;
+font-weight: 600;
+font-weight: 600; font-style: italic;
+font-weight: 700;
+font-weight: 700; font-style: italic;
+
+*/
+
+/* Super global for all elements on the page */
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+/* Global classes and elements */
+body {
+    color: #000;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    font-style: italic;
+    background: #000;
+}
+li {
+    list-style: none;
+}
+.width {
+    width: 100%;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+a {
+    color: #000;
+    text-decoration: none;
+}
+a:hover {
+    color: #ff0000;
+}
+
+/* The container the bracket lives in */
+#bracket {
+    margin: 0px auto;
+}
+
+/* Classes for column heights */
+.column {
+    padding: 20px 20px;
+}
+.column li {
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+.tall {
+    
+}
+.medium {
+    
+}
+.short {
+    
+}
+.center {
+    
+}
+
+/* Classes for and  id's for content in the columns */
+.round-1 {
+    margin: 10px 0px;
+}
+.round-2 {
+    margin: 50px 0px;
+}
+.round-3 {
+    margin: 50px 0px;
+}
+.round-4 {
+    margin: 0px 0px;
+}
+#column-1 li, #column-7 li {
+    margin: 10px 0px;
+}
+#column-2 li, #column-6 li {
+    margin: 50px 0px;
+}
+#column-3 li, #column-5 li {
+    margin: 100px 0px;
+}
+#column-4 li {
+    
+}
+.top {
+    margin-top: 0px;
+}
+.bottom {
+    
+}
+.round-2.top {
+    margin-bottom: 10px;
+}
+.round-2.bottom {
+    margin-top: 20px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 980px) {
+
+    .column {
+        padding: 20px 18px;
+    }
+
+}
+
+@media screen and (max-width: 960px) { 
+    body {
+        font-size: 17px;
+    }
+    .column {
+        padding: 20px 8px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .column {
+        padding: 20px 6px;
+    }
+}
+@media screen and (max-width: 692px) {
+    .column li {
+        padding: 5px 6px;
+    }
+}
