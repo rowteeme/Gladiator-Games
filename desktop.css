@@ -100,6 +100,6 @@ img.elm { width: 810px !important; }
 	cursor: pointer;
  }
 
- 
+ #gallery-controls { display: none !important;}
 
 
