@@ -51,6 +51,13 @@ border:1px solid black;
 text-align: center;
 }
 
+#sfield_lastname, #sfield_surname, #sfield_zip{
+	marigin-left:10px;
+}
+#sfield_name{
+	margin-left:14px;
+}
+
 /* Hide Whole form on Load <--Not sure we need this since we appended to popbox.  */
 /*#entry_submit{
 	display: none;
