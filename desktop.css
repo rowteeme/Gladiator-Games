@@ -7,6 +7,12 @@
 	border: 0px;
 }
 
+/* Horizontal Scrollbars are evil. */ 
+
+body {
+	overflow: hidden !important;
+}
+
  /* Hide Unused Elements
 	-  Nav Bar
 	- External Submissions (Twitter + Instagram)
@@ -17,28 +23,86 @@
  */
 
  div.CNav, #external_submission_instruction, div.SRules, div.CFooterDivider, div.CFooter, div.CShare, 
-#facebook-profile-connect, #upload_entry label, #photo-upload-note {
+#facebook-profile-connect, #upload_entry label, #photo-upload-note, #sfield_caption, #sfield_city, .SField label,
+.Notes {
 	display: none;
 }
 
-/* Hide Whole form on Load */
-#entry_submit{
-	display: none;
+/* Styling for Form */ 
+
+#sfield_lastname, #sfield_firstname, #firstname, #lastname { 
+	width: 160px;
 }
+
+#sfield_email, #email {
+	width: 200px;
+	display: inline;
+}
+
+#sfield_surname {
+	display: inline-block;
+}
+
+#sfield_name {
+	margin: 0 0 0 4px;
+}
+
+
+
+/* Hide Whole form on Load <--Not sure we need this since we appended to popbox.  */
+/*#entry_submit{
+	display: none;
+}*/
 
 /* Text Styling */
-h1 {
+#submit-section h1 {
 	font-size: 16px;
 	margin: 30px 85px 20px;
 	font-style: italic;
+	color: #2f2f2f;
 }
 
 
-/* Background for the Elimination Round section */
-#elimination { 
-	width: 100%;
-	background: url('https://opop.cachefly.net/amazonnb/elimination.png');
- }
+/* CSS for the Elimination Round section */
+
+#eliminationContainer{
+	background:url('https://s3.amazonaws.com/com.offerpop.datastore/438279/4fnydU.jpg')no-repeat;
+	width:810px;
+	height:82px;
+	position:relative;
+	padding:55px 0px 0px 13px;
+}
+#userB{
+	margin-left:5px;
+}
+.playerThumb div{
+	display:none;
+	width:200px;
+	height:200px;
+	background:white;
+	border-radius:5px;
+	text-align:center;
+	padding-top:5px;
+	position:absolute;
+	top:-210px;
+}
+.matchup{
+	float:left;
+	position:relative;
+	width:85px;
+	margin-left:12px;
+}
+.playerThumb{
+	float:left;
+
+}
+#dateFooter{
+	width:71px;
+	float:left;
+	text-align:center;
+	color:#fff;
+	margin-top:5px;
+}
 
  /* Background for the Participation Instructions */
 #participate {
@@ -90,7 +154,7 @@ h1 {
 .tab { margin: 0 0 -5px 0 !important; }
 
 /* Resize Elimination Round Graphic to 810px */
-img.elm { width: 810px !important; } 
+img.elim { width: 810px !important; } 
 
 /* Add padding in between each of the upload method CTAs. Padding at 20px leaves space for Twitter CTA */
 
@@ -100,6 +164,33 @@ img.elm { width: 810px !important; }
 	cursor: pointer;
  }
 
- #gallery-controls { display: none !important;}
+ #submit-section {
+ 	width: 810px !important;
+ 	padding: 0 43px;
+ }
 
+ /* Gallery Section */
 
+ #gallery-controls {
+ 	background: url('https://opop.cachefly.net/amazonnb/see-all-gladiators.png');
+ 	height: 172px;
+ }
+
+#gallery-controls ul {
+	visibility: hidden;
+}
+
+#gallery-content {
+clear: both;
+min-height: 240px;
+overflow-y: scroll !important;
+height: 330px !important;
+}
+
+#sharebar {
+padding: 20px;
+}
+
+#gallery-loading, #gallery-show-more, #gallery-refreshing {
+	margin-top: 0 !important;
+}
