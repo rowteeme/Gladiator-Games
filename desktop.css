@@ -32,7 +32,10 @@ body {
 div.SField input{
 border:1px solid black;
 }
-
+#sfield_email{
+	padding-right:10px;
+	display:inline-block;
+}
 #sfield_name {
 	margin: 0 0 0 4px;
 }
@@ -52,7 +55,7 @@ text-align: center;
 }
 
 #sfield_lastname, #sfield_surname, #sfield_zip{
-	marigin-left:10px;
+	margin-left:10px;
 }
 #sfield_name{
 	margin-left:14px;
