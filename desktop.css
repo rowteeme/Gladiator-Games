@@ -48,7 +48,7 @@ border:1px solid black;
 }
 .SDeclare{
 	display:inline-block;
-	width:265px;
+	width:265px !important;
 }
 .SSubmit {
 text-align: center;
