@@ -7,6 +7,11 @@
 	border: 0px;
 }
 
+/* Google Font */
+body, div, span, a, button {
+font-family:'Montserrat', 'Proxima Nova', Helvetica, Arial, sans-serif !important;
+}
+
 /* Horizontal Scrollbars are evil. */ 
 
 body {
@@ -132,7 +137,7 @@ text-align: center;
 .projectsboxpop {
 	display: none;
 	width: 600px;
-	height: 550px;
+	height: 310px;
 	background: url('https://opop.cachefly.net/amazonnb/submit-bg1.png');
 	float: left;
 	position: fixed;

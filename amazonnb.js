@@ -20,6 +20,9 @@ jQuery(function($) {
 	//Insert the Gallery beneath the Submit page
 	$('<iframe src="https://offerpop.com/Contest.psp?c=512215&amp;u=54823&amp;a=281603285304794&amp;p=643783498974952&amp;rest=0&amp;v=View" id="bottomgallery" width="100%" height="600"/>').insertAfter('#participate'); 
 	
+	//Insert Submit button
+	$('#form_submit_button').html('<img src="https://opop.cachefly.net/amazonnb/submit.png" />');
+
 	//Hide the Tab image on the Gallery page
 	if ($('#gallery-controls').length > 0) {
 		$('.CHeader').hide();
