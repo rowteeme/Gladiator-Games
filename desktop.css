@@ -29,25 +29,27 @@ body {
 }
 
 /* Styling for Form */ 
-
-#sfield_lastname, #sfield_firstname, #firstname, #lastname { 
-	width: 160px;
-}
-
-#sfield_email, #email {
-	width: 200px;
-	display: inline;
-}
-
-#sfield_surname {
-	display: inline-block;
+div.SField input{
+border:1px solid black;
 }
 
 #sfield_name {
 	margin: 0 0 0 4px;
 }
 
-
+#sfield_firstname, #sfield_lastname, #sfield_name, #sfield_email, #sfield_surname, #sfield_zip, #firstname, #lastname, #name, #email, #surname, #zip{
+	width:180px !important;
+}
+#sfield_zip, #sfield_optin1, #sfield_surname, #sfield_email {
+	display:inline-block;
+}
+.SDeclare{
+	display:inline-block;
+	width:265px;
+}
+.SSubmit {
+text-align: center;
+}
 
 /* Hide Whole form on Load <--Not sure we need this since we appended to popbox.  */
 /*#entry_submit{
