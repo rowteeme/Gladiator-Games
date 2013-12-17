@@ -211,3 +211,7 @@ padding: 20px;
 #gallery-loading, #gallery-show-more, #gallery-refreshing {
 	margin-top: 0 !important;
 }
+
+#form_submit_button {
+	background: transparent;
+}
