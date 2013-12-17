@@ -23,6 +23,13 @@ a:hover {
     color: #ff0000;
 }
 
+/* Class for Active column. Give this class to all the <li> in the current day column */
+.active {
+    border: 3px solid #e4bd16;
+    color: #493918;
+    background: #fff;
+}
+
 /* The container the bracket lives in */
 #bracket {
     margin: 0px auto;
@@ -36,7 +43,6 @@ font-size: 12px !important;
 .column li {
     background: #fff;
     padding: 5px 10px;
-    border-radius: 3px;
 }
 .tall {
     

@@ -31,20 +31,33 @@ a {
 a:hover {
     color: #ff0000;
 }
+/* Class for Active column. Give this class to all the <li> in the current day column */
+.active li {
+    border: 3px solid #e4bd16 !important;
+    color: #493918 !important;
+    background: #fff !important;
+}
+/* Class for Inactive column. Give this class to all of the <li> that are suppose to be faded out */
+.inactive li {
+    border: none !important;
+    color: #6d6553 !important;
+    background: #9c9c9c !important;
+}
 
 /* The container the bracket lives in */
 #bracket {
     margin: 0px auto;
+    background: #000;
+    float: left;
 }
 
 /* Classes for column heights */
 .column {
-    padding: 20px 20px;
+    padding: 20px 0px;
 }
 .column li {
     background: #fff;
-    padding: 5px 10px;
-    border-radius: 3px;
+    padding: 5px 8px;
 }
 .tall {
     

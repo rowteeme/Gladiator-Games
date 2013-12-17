@@ -1,0 +1,49 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+div.THeadlineImageContainer .THeadlineImage, div.view_countdown_container, .TDescription, div.THeader, .TComments, .TInstructions, #share_button, #powered_by, .TCount {
+    display: none;
+}
+div.TStatus .can_vote {
+    margin-top: 10px;
+}
+table.TTable .RBox, table.TTable .LBox {
+    padding: 0px !important;
+}
+.LBox, .RBox {
+    width: 50%;
+}
+div#app_canvas .TStatus .TImage img {
+    width: 100%;
+}
+div.VButton a {
+    background: #ae1b28;
+    border: none;
+    -webkit-border-radius: 0px; 
+    -moz-border-radius: 0px; 
+    border-radius: 0px;
+    padding: 9px 50px;
+}
+.LBox, .RBox {
+    width: 50%;
+}
+table.TTable {
+    margin: 0px;
+    width: 100%;
+}
+table.TTable .LBox {
+    border: none;
+}
+.LBox .TImage {
+    border-left: 3px solid #000;
+    border-top: 3px solid #000;
+    border-bottom: 3px solid #000;
+}
+.RBox .TImage {
+    border: 3px solid #000;
+}
+div.TStatus .TName {
+    padding: 10px 0px;
+}
