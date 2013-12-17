@@ -156,3 +156,49 @@ jQuery(function($) {
 		return false;
 	});
 });
+
+jQuery(function($){
+if ($('#frmSignUp').length > 0 ) {
+
+        //Take height of cropbox & resize modal
+        var resize = function(){
+                var nheight = parseInt(document.getElementById('cropbox').style.height);
+                if (nheight < 250){
+                        nheight = 250;
+                }
+                var rheight = 380 + nheight;
+
+                $('#popbox1').css('height',rheight + 'px');
+        }
+
+                //Validate image links from facebook Click event
+                var validation = function(){
+                        var nimgLink = $('#cropbox').attr('src');
+                                if (imgLink === nimgLink){
+                                        setTimeout( validation, 1500)
+                                } 
+                                else{
+                                        resize();
+                                }
+                }
+
+                var blankLink = '//s3.amazonaws.com/com.offerpop.static/images/white.gif'
+                        ,freshLink = $('#cropbox').attr('src');
+
+                                if (freshLink !== blankLink){
+                                        resize();
+                                }
+
+                $('.CFile .from_facebook_button.fancybox_link').click(function(){
+                        imgLink = $('#cropbox').attr('src');
+                        setTimeout(validation, 1000);
+                });
+
+                $('#file_data').change(function(){
+                        imgLink = $('#cropbox').attr('src');
+                        setTimeout(validation, 1000);
+                });
+
+
+}
+});
