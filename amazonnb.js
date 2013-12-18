@@ -23,9 +23,17 @@ jQuery(function($) {
 	//Insert Submit button
 	$('#form_submit_button').html('<img src="https://opop.cachefly.net/amazonnb/submit.png" />');
 
-	//Hide the Tab image on the Gallery page
+	//Hide the Tab image on the Gallery page and style changes
 	if ($('#gallery-controls').length > 0) {
 		$('.CHeader').hide();
+	} else if ($('#sharebar').length > 0) {
+		$('.CHeader').hide();
+		$('.CSub').css('color', 'white');
+		$('.TInstructions').css('color', 'white');
+		$('.bitlyLink').css('color', 'white');
+		$('#share-option-facebook a').css('color', 'white');
+		$('#share-option-twitter a').css('color', 'white');
+		$('#share-option-email a').css('color', 'white');
 	}
 });
 
@@ -45,7 +53,7 @@ jQuery(function($){
 // Pre-Populate Fields that aren't being used with dummy text
 
 jQuery(function($){
-	$('#caption').attr('value', 'Caption');
+	$('#caption').attr('value', 'LET THE GAMES BEGIN! The NB Gladiator Games are underway – unleash your inner gladiator for a chance to win a 10-day VIP experience to Rome for two, plus entries to run the legendary Rome Marathon, courtesy of @newbalance. Enter now.');
 	$('#city').attr('value', 'City');
 });
 
