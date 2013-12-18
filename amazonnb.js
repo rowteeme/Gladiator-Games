@@ -102,7 +102,11 @@ jQuery(function($) {
 		var popuprel = $(elem).attr('rel');
 		$('#' + popuprel).fadeIn();
 		$('#fadebg').css({'filter' : 'alpha(opacity=80)'}).fadeIn();
-		var topindent = ($('#' + popuprel).height() + 10) / 2;
+		if (popuprel !== 'popbox3'){
+			var topindent = ($('#' + popuprel).height() + 10) / 2;
+		}else{
+			var topindent = 850;
+		}
 		var leftindent = ($('#' + popuprel).width() + 10) / 2;
 		$('#' + popuprel).css({
 		'margin-top' : -topindent,
@@ -137,7 +141,7 @@ jQuery(function($) {
 	});
 
 	$('#fadebg , .closebutton').click(function() {  
-		$('#popbox1, #fadebg, #popbox2').fadeOut()
+		$('#popbox1, #fadebg, #popbox2, #popbox3').fadeOut()
 		return false;
 	});
 });
