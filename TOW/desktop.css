@@ -3,6 +3,17 @@
     padding: 0px;
     border: 0px;
 }
+body {
+    overflow: hidden;
+    width: 100% !important;
+    background: transparent !important;
+}
+html {
+    width: 100% !important;
+}
+div.TStatus, .PageContent, div.TugPageContent {
+    width: 100%;
+}
 div.THeadlineImageContainer .THeadlineImage, div.view_countdown_container, .TDescription, div.THeader, .TComments, .TInstructions, #share_button, #powered_by, .TCount {
     display: none;
 }
@@ -35,15 +46,40 @@ table.TTable {
 }
 table.TTable .LBox {
     border: none;
+    width: 50% !important;
+}
+table.TTable .RBox {
+    width: 50% !important;
 }
 .LBox .TImage {
     border-left: 3px solid #000;
     border-top: 3px solid #000;
     border-bottom: 3px solid #000;
+    background: #fff;
 }
 .RBox .TImage {
     border: 3px solid #000;
+    background: #fff;
 }
+
 div.TStatus .TName {
     padding: 10px 0px;
+}
+
+/* Start  CSS for bracket bottom */
+
+#tow {
+    float: left;
+    margin: 50px 0px;
+}
+div.CSub {
+    float: left;
+    width: 100%;
+}
+
+#clock-container {
+    text-align: center;
+}
+.war {
+    width: 48%;
 }

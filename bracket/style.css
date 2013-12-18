@@ -11,7 +11,9 @@ font-weight: 700; font-style: italic;
 
 */
 
-
+div.CResults {
+    padding: 0px;
+}
 li {
     list-style: none;
 }
@@ -47,10 +49,12 @@ a:hover {
 /* The container the bracket lives in */
 #bracket {
     margin: 0px auto;
-    background: #000;
+    background: url("https://opop.cachefly.net/max/amazon/assets/images/black-back.png");
     float: left;
 }
-
+#line {
+    width: 100%;
+}
 /* Classes for column heights */
 .column {
     padding: 20px 0px;

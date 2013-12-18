@@ -15,3 +15,12 @@ jQuery(function($){
     });
     
 });
+
+jQuery(function($){
+
+    $(document).ready(function(){
+        $("#Count1").insertBefore(".LBox .TImage");
+        $("#Count2").insertBefore(".RBox .TImage");
+    });    
+
+});
