@@ -231,7 +231,9 @@ padding: 20px;
 .CEditEntry a {
 color: white;
 }
-
+#goBack{
+	margin:-50px 0px 0px 20px;
+}
 .CAfterSubmitPrompt {
 width: 95%;
 background: transparent;
