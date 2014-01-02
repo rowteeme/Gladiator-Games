@@ -92,7 +92,7 @@ font-weight: bold;
 	width:810px;
 	height:95px;
 	position:relative;
-	padding:55px 0px 0px 13px;
+	padding:70px 0px 0px 13px;
 }
 #userB{
 	margin-left:5px;
@@ -195,8 +195,9 @@ img.elim { width: 810px !important; }
 
 #spotsLeft{
 	position:relative;
-	top:-50px;
-	left:600px;
+	top:-115px;
+	left:535px;
+	color:#fff;
 }
 
  /* Gallery Section */
