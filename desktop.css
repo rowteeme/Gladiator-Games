@@ -53,7 +53,7 @@ border:1px solid black;
 }
 .SDeclare{
 	display:inline-block;
-	width:270px !important;
+	width:290px !important;
 }
 .SSubmit {
 text-align: center;
@@ -79,15 +79,18 @@ text-align: center;
 	margin: 30px 85px 20px;
 	font-style: italic;
 	color: #2f2f2f;
+	font-weight:normal;
 }
-
+#bolder {
+font-weight: bold;
+}
 
 /* CSS for the Elimination Round section */
 
 #eliminationContainer{
-	background:url('https://s3.amazonaws.com/com.offerpop.datastore/438279/4fnydU.jpg')no-repeat;
+	background:url('https://s3.amazonaws.com/com.offerpop.datastore/438279/D4lWrD.jpg')no-repeat;
 	width:810px;
-	height:82px;
+	height:95px;
 	position:relative;
 	padding:55px 0px 0px 13px;
 }
@@ -139,7 +142,7 @@ text-align: center;
 .projectsboxpop {
 	display: none;
 	width: 600px;
-	height: 310px;
+	height: 380px;
 	background: url('https://opop.cachefly.net/amazonnb/submit-bg1.png');
 	float: left;
 	position: fixed;
@@ -212,10 +215,16 @@ min-height: 240px;
 overflow-y: scroll !important;
 height: 330px !important;
 background: url('https://opop.cachefly.net/amazonnb/gallery-bg2.png');
+margin-left: 5px;
 }
 
 #sharebar {
 padding: 20px;
+}
+
+.Thumbnail img {
+width: 250px !important;
+height: 250px !important;
 }
 
 #gallery-loading, #gallery-show-more, #gallery-refreshing {
@@ -257,6 +266,7 @@ margin: 20px;
 line-height: 1.2em;
 text-align: center;
 margin: auto;
+display:none;
 }
 
 .divider { display: none;}
@@ -271,8 +281,12 @@ margin: auto;
 	width:190px;
 	height:73px;
 	position:absolute;
-	top:325px;
-	left:545px;
+	top:345px;
+	left:580px;
 	border:none;
+}
+#officialRules p {
+font-size: 11px;
+padding:20px;
 }
 

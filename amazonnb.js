@@ -1,4 +1,6 @@
 jQuery(function($){
+	var galleryPageLink = '/Contest.psp?c=522682&amp;u=54823&amp;a=448952861833126&amp;p=643783498974952&amp;rest=0&amp;v=Submit';
+
 	// Redirect users from Submit page to About page
 	if ($('.SDescription').length > 0){
 		var enter = $('#cnav_submit').attr('href');
@@ -8,6 +10,7 @@ jQuery(function($){
 	// On DOM Ready function to get rid of all the crap in the footer
 	$("div.CFooterDivider").next().hide();
 	$("div.CFooter").prev().remove();
+	$('#officialRules').insertBefore('.CFooterDivider');
 
 		// Pre-Populate Fields that aren't being used with dummy text
 		$('#caption').attr('value', 'LET THE GAMES BEGIN! The NB Gladiator Games are underway – unleash your inner gladiator for a chance to win a 10-day VIP experience to Rome for two, plus entries to run the legendary Rome Marathon, courtesy of @newbalance. Enter now.');
@@ -19,7 +22,7 @@ jQuery(function($){
 		// $('<div id="submit-section"><h1>Tag your entry with #NBGladiator or upload from the options below</h1><div id="upload-methods"><img id="computer-upload" class="social-cta" src="https://opop.cachefly.net/amazonnb/upload.png" /><img id="facebook-upload" class="social-cta" src="https://opop.cachefly.net/amazonnb/facebook.png" /><img id="instagram-cta" class="social-cta" src="https://opop.cachefly.net/amazonnb/instagram.png" /></div></div>').insertAfter('#instructions');
 		
 		//Insert the Gallery beneath the Submit page
-		$('<iframe src="https://offerpop.com/Contest.psp?c=512215&amp;u=54823&amp;a=281603285304794&amp;p=643783498974952&amp;rest=0&amp;v=View" id="bottomgallery" width="100%" height="600"/>').insertAfter('#participate'); 
+		$('<iframe src="https://offerpop.com/Contest.psp?c=522682&u=54823&a=281603285304794&p=643783498974952&rest=0&v=View" id="bottomgallery" width="100%" height="400"/>').insertAfter('#participate'); 
 		
 		//Insert Submit button
 		$('#form_submit_button').html('<img src="https://opop.cachefly.net/amazonnb/submit.png" />');
@@ -49,6 +52,11 @@ jQuery(function($){
 	//Create Back to Gallery Button
 	var galleryPage = $('#cnav_view').attr('href');
 	$('<div id="goBack"><a href="' + galleryPage + '" target="_self"><p>Back to Gallery</p></a></div>').insertAfter('#sharebar');
+
+	if ($('.CAfterSubmitPrompt').length > 0 ){
+		$('#goBack a').attr('href', galleryPageLink);
+
+	}
 
 });
 
@@ -95,6 +103,7 @@ jQuery(function($) {
 	$('.SBox').appendTo('#popbox1');
 	$('#entry_submit').prependTo('#popbox1');
 	$('#UserMessage').prependTo('#popbox1');
+	$('#photo_submit').prependTo('#popbox1');
 
 
 	//Create positionPopBox function for reuse
@@ -116,7 +125,7 @@ jQuery(function($) {
 
 	//If the error message exists
 	if($('.Invalid').length > 0) {
-		var that = $('.social-cta').first();
+		var that = $('.social-cta[rel=popbox1]').first();
 		positionPopBox(that)
 	}
 
@@ -183,7 +192,7 @@ if ($('#frmSignUp').length > 0 ) {
                         setTimeout(validation, 1000);
                 });
 
-                $('#file_data').change(function(){
+                $('#form_pic').change(function(){
                         imgLink = $('#cropbox').attr('src');
                         setTimeout(validation, 1000);
                 });
