@@ -127,7 +127,7 @@ text-align: center;
 #participate {
 	width: 100%;
 	height: 539px;
-	background: url('https://opop.cachefly.net/amazonnb/instructions2.png');
+	background: url('https://s3.amazonaws.com/com.offerpop.datastore/438279/Jk0P5e.jpg');
 }
 
 /* Background for the Submission Form page */
@@ -179,7 +179,7 @@ img.elim { width: 810px !important; }
 
 
 .social-cta { 
-	padding: 0 20px;
+	padding: 0 5px;
 	cursor: pointer;
  }
 
@@ -188,6 +188,12 @@ img.elim { width: 810px !important; }
 	padding: 15px 0px 43px 43px;
 	background: url('https://opop.cachefly.net/amazonnb/submit-bg1.png');
 	margin-bottom: -20px;
+}
+
+#spotsLeft{
+	position:relative;
+	top:-50px;
+	left:600px;
 }
 
  /* Gallery Section */
@@ -226,6 +232,13 @@ padding: 20px;
 
 .CQuote, .CLocation {
 	display: none;
+}
+#goBack p {
+color: #fff !important;
+}
+
+#leftcol {
+margin-left: 10px;
 }
 
 .CEditEntry a {
