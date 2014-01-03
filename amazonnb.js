@@ -7,6 +7,10 @@ jQuery(function($){
 		window.open( enter , '_self');
 	}
 
+	if ($('#sharebar').length > 0 ){
+		$('.CSub').addClass('entryPage');
+	}
+
 	//Pre-check opt-ins
 	    $('#optin1').prop('checked', true);
 	    $('#optin2').prop('checked', true);
@@ -25,7 +29,7 @@ jQuery(function($){
 		// $('<div id="submit-section"><h1>Tag your entry with #NBGladiator or upload from the options below</h1><div id="upload-methods"><img id="computer-upload" class="social-cta" src="https://opop.cachefly.net/amazonnb/upload.png" /><img id="facebook-upload" class="social-cta" src="https://opop.cachefly.net/amazonnb/facebook.png" /><img id="instagram-cta" class="social-cta" src="https://opop.cachefly.net/amazonnb/instagram.png" /></div></div>').insertAfter('#instructions');
 		
 		//Insert the Gallery beneath the Submit page
-		$('<iframe src="https://offerpop.com/Contest.psp?c=522682&u=54823&a=281603285304794&p=643783498974952&rest=0&v=View" id="bottomgallery" width="100%" height="400"/>').insertAfter('#participate'); 
+		$('<iframe src="https://offerpop.com/Contest.psp?c=522682&u=54823&a=281603285304794&p=643783498974952&rest=0&v=View" id="bottomgallery" width="100%" height="500"/>').insertAfter('#participate'); 
 		
 		//Insert Submit button
 		$('#form_submit_button').html('<img src="https://opop.cachefly.net/amazonnb/submit.png" />');
@@ -44,13 +48,13 @@ jQuery(function($){
 			}
 
 	// Elimination Round
-	$('.playerThumb a').mouseenter(function(){
+	/*$('.playerThumb .smThumb').mouseenter(function(){
 			$(this).next().show();
 	});
 
-	$('.playerThumb a').mouseleave(function(){
+	$('.playerThumb .smThumb').mouseleave(function(){
 			$(this).next().hide();
-	});
+	});*/
 
 	//Create Back to Gallery Button
 	var galleryPage = $('#cnav_view').attr('href');
@@ -177,7 +181,7 @@ if ($('#frmSignUp').length > 0 ) {
                 var validation = function(){
                         var nimgLink = $('#cropbox').attr('src');
                                 if (imgLink === nimgLink){
-                                        setTimeout( validation, 1500)
+                                        setTimeout( validation, 1000)
                                 } 
                                 else{
                                         resize();
