@@ -29,7 +29,7 @@ body {
 
  div.CNav, #external_submission_instruction, div.SRules, div.CFooterDivider, div.CFooter, div.CShare, 
 #facebook-profile-connect, #upload_entry label, #photo-upload-note, #sfield_caption, .SField label,
-.Notes, #photo + div{
+.Notes, #photo + div, #share-option-link{
 	display: none;
 }
 
@@ -74,10 +74,11 @@ margin: 0 0 0 10px;
 /* Text Styling */
 #submit-section h1 {
 	font-size: 16px;
-	margin: 30px 85px 20px;
+	margin: 30px 85px 20px -10px;
 	font-style: italic;
 	color: #2f2f2f;
 	font-weight:normal;
+	text-align: center;
 }
 #bolder {
 font-weight: bold;
@@ -86,12 +87,11 @@ font-weight: bold;
 /* CSS for the Elimination Round section */
 
 #eliminationContainer{
-	/*background:url('https://s3.amazonaws.com/com.offerpop.datastore/438279/D4lWrD.jpg')no-repeat;*/
-	background:url('https://s3.amazonaws.com/com.offerpop.datastore/438279/xE3PUa.jpg')no-repeat;
+	background:url('https://s3.amazonaws.com/com.offerpop.datastore/438279/UpNyYn.jpg')no-repeat;
 	width:810px;
-	height:90px;
+	height:80px;
 	position:relative;
-	padding:70px 0px 0px 13px;
+	padding:89px 0px 0px 13px;
 }
 #userB{
 	margin-left:5px;
@@ -128,13 +128,26 @@ font-weight: bold;
  /* Background for the Participation Instructions */
 #participate {
 	width: 100%;
-	height: 539px;
-	background: url('https://s3.amazonaws.com/com.offerpop.datastore/438279/Jk0P5e.jpg');
+	height: 580px;
+	background: url('https://s3.amazonaws.com/com.offerpop.datastore/438279/zM3KvO.jpg');
 }
-
+#rulesLink {
+	position: relative;
+	top: 113px;
+	left: 96px;
+	color: #fff;
+}
 /* Background for the Submission Form page */
 .CSub { 
- 	background: url('https://opop.cachefly.net/amazonnb/gallery-bg2.png');
+ 	background: url('https://s3.amazonaws.com/com.offerpop.datastore/438279/x8s7JR.jpg');
+}
+div.CName{
+	color:#fff;
+}
+#edit_entry {
+width: 600px;
+text-align: center;
+border: 0px;
 }
 /* CSS for Pop Up */
 
@@ -219,10 +232,11 @@ img.elim { width: 810px !important; }
 }
 
 #spotsLeft{
-	position:relative;
-	top:-115px;
-	left:680px;
-	color:#fff;
+	position:absolute;
+	top:40px;
+	left:705px;
+	color:#d7d571;
+	font-size:11px;
 }
 
  /* Gallery Section */
@@ -240,14 +254,17 @@ clear: both;
 min-height: 240px;
 overflow-y: scroll !important;
 height: 330px !important;
-background: url('https://opop.cachefly.net/amazonnb/gallery-bg2.png');
+background: url('https://s3.amazonaws.com/com.offerpop.datastore/438279/x8s7JR.jpg');
 margin-left: 5px;
 }
 
 #sharebar {
 padding: 20px;
 }
+div.CEditEntry{
+	color:#fff;
 
+}
 .Thumbnail img {
 width: 185px !important;
 height: 185px !important;
@@ -307,8 +324,8 @@ display:none;
 	width:190px;
 	height:73px;
 	position:absolute;
-	top:345px;
-	left:580px;
+	top:365px;
+	left:535px;
 	border:none;
 }
 #officialRules p {

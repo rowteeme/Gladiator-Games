@@ -11,6 +11,14 @@ jQuery(function($){
 		$('.CSub').addClass('entryPage');
 	}
 
+	if ($('.CAfterSubmitPrompt').length > 0 ){
+		$('#edit_entry').html('<div><h1>Thank you for entering The Gladiator Showdown.</h1><p>Your submission is currently being reviewed and should be posted shortly. Please allow up to 6 hours for your image to appear in the gallery. Best of luck, and may the best gladiator win.</p></div>');
+		$('.CSub').css({
+			"margin-top":"-10px"
+			,"padding-top":"10px"
+		});
+	}
+
 	//Pre-check opt-ins
 	    $('#optin1').prop('checked', true);
 	    $('#optin2').prop('checked', true);
@@ -24,7 +32,7 @@ jQuery(function($){
 		$('#caption').attr('value', 'LET THE GAMES BEGIN! The NB Gladiator Games are underway – unleash your inner gladiator for a chance to win a 10-day VIP experience to Rome for two, plus entries to run the legendary Rome Marathon, courtesy of @newbalance. Enter now.');
 		// Inserting and Moving Around Divs
 		// Insert the Participate Instructions below .SBox
-		$('<div id="participate"></div>').insertAfter('.SBox');
+		$('<div id="participate"><p id="rulesLink">For complete rules, <a href="https://opop.cachefly.net/amazonnb/NB%20Comments%20Final%20Rules%2012.23.13.pdf" target="_blank" style="color:#5f8dae;">click here</a></p></div>').insertAfter('.SBox');
 		// Create a div called Submit Section and insert after Instructions
 		// $('<div id="submit-section"><h1>Tag your entry with #NBGladiator or upload from the options below</h1><div id="upload-methods"><img id="computer-upload" class="social-cta" src="https://opop.cachefly.net/amazonnb/upload.png" /><img id="facebook-upload" class="social-cta" src="https://opop.cachefly.net/amazonnb/facebook.png" /><img id="instagram-cta" class="social-cta" src="https://opop.cachefly.net/amazonnb/instagram.png" /></div></div>').insertAfter('#instructions');
 		
@@ -62,8 +70,29 @@ jQuery(function($){
 
 	if ($('.CAfterSubmitPrompt').length > 0 ){
 		$('#goBack a').attr('href', galleryPageLink);
-
 	}
+
+	//Change Twitter Share Copy
+	if ($('#share-option-twitter').length > 0 ){
+		var bitLy = $('#share-option-link input').attr('value');
+		$('#share-option-twitter a').attr('href','http://twitter.com/share?text=The%20competition%20is%20getting%20stiffer!%20Enter%20the%20%23NBGladiator%20Showdown%20by%20%40newbalance%20%26%20%40amazon%20and%20claim%20your%20destiny%3A&url=' + bitLy);
+	}
+
+	//Change Email Share Copy
+	if ($('#share-option-email').length > 0 ){
+		var bitLy = $('#share-option-link input').attr('value').slice(14,20);
+		$('#share-option-email a').attr('href', 'mailto:?body=The%20competition%20is%20getting%20stiffer!%20Enter%20the%20%23NBGladiator%20Showdown%20by%20%40newbalance%20%26%20%40amazon%20and%20claim%20your%20destiny%3A%20http%3A//bit.ly/' + bitLy );
+	}
+
+	//Change Pinterest Share Copy
+	if ($('#share-option-pinterest').length > 0 ){
+		var sLink = $('#share-option-pinterest a').attr('href').indexOf('url=') + 4
+		,eLink = $('#share-option-pinterest a').attr('href').indexOf('&media')
+		,aLink = $('#share-option-pinterest a').attr('href').slice(sLink, eLink)
+		,img = $('#media-photo').attr('src');
+		$('#share-option-pinterest a').attr('href', 'http://pinterest.com/pin/create/button/?url=' + aLink + '&media=' + img + '&description=The%20competition%20is%20getting%20stiffer!%20Enter%20the%20%23NBGladiator%20Showdown%20by%20%40newbalance%20%26%20%40amazon%20and%20claim%20your%20destiny%3A');
+	}
+
 
 });
 
@@ -181,7 +210,7 @@ if ($('#frmSignUp').length > 0 ) {
                 var validation = function(){
                         var nimgLink = $('#cropbox').attr('src');
                                 if (imgLink === nimgLink){
-                                        setTimeout( validation, 1000)
+                                        setTimeout( validation, 1500)
                                 } 
                                 else{
                                         resize();
