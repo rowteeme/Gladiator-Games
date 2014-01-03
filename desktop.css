@@ -28,8 +28,8 @@ body {
  */
 
  div.CNav, #external_submission_instruction, div.SRules, div.CFooterDivider, div.CFooter, div.CShare, 
-#facebook-profile-connect, #upload_entry label, #photo-upload-note, #sfield_caption, #sfield_city, .SField label,
-.Notes {
+#facebook-profile-connect, #upload_entry label, #photo-upload-note, #sfield_caption, .SField label,
+.Notes, #photo + div{
 	display: none;
 }
 
@@ -41,11 +41,8 @@ border:1px solid black;
 	padding-right:10px;
 	display:inline-block;
 }
-#sfield_name {
-	margin: 0 0 0 4px;
-}
 
-#sfield_firstname, #sfield_lastname, #sfield_name, #sfield_email, #sfield_surname, #sfield_zip, #firstname, #lastname, #name, #email, #surname, #zip{
+#sfield_firstname, #sfield_lastname, #sfield_city, #sfield_email, #sfield_surname, #sfield_zip, #firstname, #lastname, #city, #email, #surname, #zip{
 	width:180px !important;
 }
 #sfield_zip, #sfield_optin1, #sfield_surname, #sfield_email {
@@ -62,8 +59,9 @@ text-align: center;
 #sfield_lastname, #sfield_surname, #sfield_zip{
 	margin-left:10px;
 }
-#sfield_name{
-	margin-left:14px;
+#sfield_city {
+display: inline-block;
+margin: 0 0 0 10px;
 }
 
 
@@ -141,8 +139,6 @@ font-weight: bold;
 
 .projectsboxpop {
 	display: none;
-	width: 600px;
-	height: 380px;
 	background: url('https://opop.cachefly.net/amazonnb/submit-bg1.png');
 	float: left;
 	position: fixed;
@@ -156,7 +152,24 @@ font-weight: bold;
 	border-radius: 5px;
 	padding: 20px;
 }
-
+#popbox1{
+	width: 600px;
+	height: 380px;
+}
+#popbox2, #popbox3{
+	width: 600px;
+	height: 135px;
+	text-align:center;
+	color:#000;
+}
+#popbox2 p, #popbox3 p {
+padding-bottom: 10px;
+}
+#popbox4 {
+	width: 600px;
+	height: 340px;
+	text-align: center;
+}
 #fadebg {
 	display: none; 
 	background: #000;
@@ -168,7 +181,18 @@ font-weight: bold;
 	opacity: .10;
 	z-index: 99998;
 }
-
+#closeButton {
+	width: 65px;
+	text-align: left;
+	position: relative;
+	left: 550px;
+	top: -10px;
+	cursor: pointer;
+	color: #000;
+}
+#upload, #sfield_optin1, #sfield_optin2, .SDeclare {
+	color: #000;
+}
 /* End CSS for Pop up */
 
 
@@ -196,7 +220,7 @@ img.elim { width: 810px !important; }
 #spotsLeft{
 	position:relative;
 	top:-115px;
-	left:695px;
+	left:680px;
 	color:#fff;
 }
 
@@ -224,8 +248,8 @@ padding: 20px;
 }
 
 .Thumbnail img {
-width: 250px !important;
-height: 250px !important;
+width: 185px !important;
+height: 185px !important;
 }
 
 #gallery-loading, #gallery-show-more, #gallery-refreshing {

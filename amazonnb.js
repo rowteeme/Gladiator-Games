@@ -7,6 +7,10 @@ jQuery(function($){
 		window.open( enter , '_self');
 	}
 
+	//Pre-check opt-ins
+	    $('#optin1').prop('checked', true);
+	    $('#optin2').prop('checked', true);
+
 	// On DOM Ready function to get rid of all the crap in the footer
 	$("div.CFooterDivider").next().hide();
 	$("div.CFooter").prev().remove();
@@ -14,7 +18,6 @@ jQuery(function($){
 
 		// Pre-Populate Fields that aren't being used with dummy text
 		$('#caption').attr('value', 'LET THE GAMES BEGIN! The NB Gladiator Games are underway – unleash your inner gladiator for a chance to win a 10-day VIP experience to Rome for two, plus entries to run the legendary Rome Marathon, courtesy of @newbalance. Enter now.');
-		$('#city').attr('value', 'City');
 		// Inserting and Moving Around Divs
 		// Insert the Participate Instructions below .SBox
 		$('<div id="participate"></div>').insertAfter('.SBox');
@@ -63,12 +66,12 @@ jQuery(function($){
 // Placeholder Text for Form Fields
 jQuery(function($){
 	// Reorder inputs and Placeholders for Submit Form
-	$('#sfield_name').insertAfter('#sfield_lastname');
+	$('#sfield_city').insertBefore('#sfield_email');
 	$("#email").attr('placeholder', 'Email address');
 	$("#firstname").attr('placeholder', 'First name');
 	$("#lastname").attr('placeholder', 'Last name');
 	$("#zip").attr('placeholder', 'Zip code');
-	$("#name").attr('placeholder', 'Username');
+	$("#city").attr('placeholder', 'Username');
 	$("#surname").attr('placeholder', 'Phone number');
 
 	//Fix Placeholders
@@ -99,11 +102,12 @@ $('[placeholder]').focus(function() {
 
 jQuery(function($) {   
 	// Move Form into the PopBox
-	$('#crop_area').appendTo('#popbox1');
-	$('.SBox').appendTo('#popbox1');
 	$('#entry_submit').prependTo('#popbox1');
 	$('#UserMessage').prependTo('#popbox1');
 	$('#photo_submit').prependTo('#popbox1');
+	$('#crop_area').appendTo('#popbox1');
+	$('.SBox').appendTo('#popbox1');
+	$('<p id="closeButton">CLOSE X</p>').prependTo('#popbox1');
 
 
 	//Create positionPopBox function for reuse
@@ -111,7 +115,7 @@ jQuery(function($) {
 		var popuprel = $(elem).attr('rel');
 		$('#' + popuprel).fadeIn();
 		$('#fadebg').css({'filter' : 'alpha(opacity=80)'}).fadeIn();
-		if (popuprel !== 'popbox3'){
+		if (popuprel !== 'popbox4'){
 			var topindent = ($('#' + popuprel).height() + 10) / 2;
 		}else{
 			var topindent = 850;
@@ -149,8 +153,8 @@ jQuery(function($) {
 		validateLinks()
 	});
 
-	$('#fadebg , .closebutton').click(function() {  
-		$('#popbox1, #fadebg, #popbox2, #popbox3').fadeOut()
+	$('#fadebg , #closeButton').click(function() {  
+		$('#popbox1, #fadebg, #popbox2, #popbox3, #popbox4').fadeOut()
 		return false;
 	});
 });
