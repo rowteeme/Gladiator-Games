@@ -160,6 +160,21 @@ jQuery(function($) {
 		});
 	}
 
+	var reposition = function(item, place){
+		var popuprel = $(item).attr('rel');
+		$('#' + popuprel).css('margin-top', place + 'px');
+	}
+
+
+	var claimName = $('#firstname').val();
+
+	if (claimName !== 'First name'){
+		var that = $('.social-cta[rel=popbox1]').first()
+		,location = -1000;
+		positionPopBox(that)
+		reposition(that, location)
+	}
+
 	//If the error message exists
 	if($('.Invalid').length > 0) {
 		var that = $('.social-cta[rel=popbox1]').first();
@@ -201,7 +216,7 @@ if ($('#frmSignUp').length > 0 ) {
                 if (nheight < 250){
                         nheight = 250;
                 }
-                var rheight = 380 + nheight;
+                var rheight = 410 + nheight;
 
                 $('#popbox1').css('height',rheight + 'px');
         }

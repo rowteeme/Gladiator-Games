@@ -54,6 +54,7 @@ border:1px solid black;
 }
 .SSubmit {
 text-align: center;
+margin-top:-5px;
 }
 
 #sfield_lastname, #sfield_surname, #sfield_zip{
