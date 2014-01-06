@@ -32,7 +32,7 @@ jQuery(function($){
 		$('#caption').attr('value', 'LET THE GAMES BEGIN! The NB Gladiator Games are underway – unleash your inner gladiator for a chance to win a 10-day VIP experience to Rome for two, plus entries to run the legendary Rome Marathon, courtesy of @newbalance. Enter now.');
 		// Inserting and Moving Around Divs
 		// Insert the Participate Instructions below .SBox
-		$('<div id="participate"><p id="rulesLink">For complete rules, <a href="https://opop.cachefly.net/amazonnb/NB%20Comments%20Final%20Rules%2012.23.13.pdf" target="_blank" style="color:#5f8dae;">click here</a></p></div>').insertAfter('.SBox');
+		$('<div id="participate"><p id="rulesLink">For complete rules, <a href="https://opop.cachefly.net/amazonnb/Amazon.com%20and%20New%20Balance%20Gladiator%20Showdown%20(Contest)%20-%20Official%20Rules%20(2014-01-03)%20-%201417141v1.6.pdf" target="_blank" style="color:#5f8dae;">click here</a></p></div>').insertAfter('.SBox');
 		// Create a div called Submit Section and insert after Instructions
 		// $('<div id="submit-section"><h1>Tag your entry with #NBGladiator or upload from the options below</h1><div id="upload-methods"><img id="computer-upload" class="social-cta" src="https://opop.cachefly.net/amazonnb/upload.png" /><img id="facebook-upload" class="social-cta" src="https://opop.cachefly.net/amazonnb/facebook.png" /><img id="instagram-cta" class="social-cta" src="https://opop.cachefly.net/amazonnb/instagram.png" /></div></div>').insertAfter('#instructions');
 		
