@@ -22,6 +22,7 @@ jQuery(function($){
 	//Pre-check opt-ins
 	    $('#optin1').prop('checked', true);
 	    $('#optin2').prop('checked', true);
+	    $('#optin3').prop('checked', true);
 
 	// On DOM Ready function to get rid of all the crap in the footer
 	$("div.CFooterDivider").next().hide();
@@ -225,7 +226,7 @@ if ($('#frmSignUp').length > 0 ) {
                 var validation = function(){
                         var nimgLink = $('#cropbox').attr('src');
                                 if (imgLink === nimgLink){
-                                        setTimeout( validation, 1500)
+                                        setTimeout( validation, 1000)
                                 } 
                                 else{
                                         resize();
@@ -241,12 +242,12 @@ if ($('#frmSignUp').length > 0 ) {
 
                 $('.CFile .from_facebook_button.fancybox_link').click(function(){
                         imgLink = $('#cropbox').attr('src');
-                        setTimeout(validation, 1000);
+                        setTimeout(validation, 500);
                 });
 
                 $('#form_pic').change(function(){
                         imgLink = $('#cropbox').attr('src');
-                        setTimeout(validation, 1000);
+                        setTimeout(validation, 500);
                 });
 
 
